@@ -1,0 +1,15 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 68px;
+    z-index: 1;
+}
+
+/* Fix nav overlaying main */
+main {
+    padding-top: 68px;
+}
+
+nav a {
+    color: var(--offwhite);
+}

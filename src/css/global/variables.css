@@ -1,0 +1,15 @@
+:root {
+    /* Colour Variables */
+    --primary: #c7d532;
+    
+    --white: #ffffff;
+    --offwhite: #cdcdcd;
+
+    --grey--lightest: #2f2f2f;
+    --grey--light: #262626;
+    --grey--dark: #222222;
+    --grey--darkest: #1f1f1f;
+
+    /* Layout Variables */
+    --row--padding: 3em;
+}

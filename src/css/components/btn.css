@@ -1,0 +1,8 @@
+.btn {
+    border: none;
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
+}

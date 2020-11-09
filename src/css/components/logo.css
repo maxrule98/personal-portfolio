@@ -1,0 +1,8 @@
+.logo {
+    margin: 0 !important;
+    padding: 0.5em;
+    color: black;
+    font-weight: bold;
+    background: var(--primary);
+    max-width: max-content;
+}

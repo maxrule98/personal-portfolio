@@ -1,0 +1,11 @@
+.row {
+    padding: var(--row--padding) 0;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(12, minmax(5px, 1fr));
+}
+
+.row--nav {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(5px, 1fr));
+}
