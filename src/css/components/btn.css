@@ -1,8 +1,25 @@
 .btn {
+    position: relative;
     border: none;
+    height: 40px;
+    padding: 0 1em;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .btn--block {
     display: block;
     width: 100%;
+}
+
+.btn--primary {
+    background: var(--primary);
+    font-weight: bold;
+    transition: transform 275ms ease;
+}
+.btn--primary:hover,
+.btn--primary:active,
+.btn--primary:target
+ {
+    transform: translate(0px, -3px);
 }

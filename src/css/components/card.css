@@ -1,0 +1,9 @@
+.card {
+    margin: 0;
+    padding: 0;
+}
+
+.card img {
+
+    margin: 0 0 var(--col--padding) 0;
+}

@@ -1,11 +1,38 @@
 .btn {
+    position: relative;
     border: none;
+    height: 40px;
+    padding: 0 1em;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .btn--block {
     display: block;
     width: 100%;
 }
+
+.btn--primary {
+    background: var(--primary);
+    font-weight: bold;
+    transition: transform 275ms ease;
+}
+.btn--primary:hover,
+.btn--primary:active,
+.btn--primary:target
+ {
+    transform: translate(0px, -3px);
+}
+.card {
+    margin: 0;
+    padding: 0;
+}
+
+.card img {
+
+    margin: 0 0 var(--col--padding) 0;
+}
+
 .logo {
     margin: 0 !important;
     padding: 0.5em;
@@ -54,6 +81,7 @@ img {
 
     /* Layout Variables */
     --row--padding: 3em;
+    --col--padding: 1em;
 }
 /*
     gethifi.com - CSS Type Boilerplate
@@ -83,14 +111,14 @@ img {
     background: rgba(255,200,200,.3);
 } */
 
-/* @font-face {
-    font-family: 'azonix';
-    src: url('../../fonts/azonix/Azonix.otf');
+@font-face {
+    font-family: 'CODE';
+    src: url('/ElliotSans-Bold.a9eab015.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'less-sans';
     src: url('../../fonts/Less-Sans/Less.otf');
     font-weight: normal;
@@ -117,7 +145,7 @@ img { display: block; }
 /* Headers */
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     text-rendering: optimizeLegibility; /* optional - helps kerning in some browsers */
-    font-family: 'azonix', sans-serif;
+    font-family: 'code', sans-serif;
     font-weight: normal;
     color: var(--white);
 }
@@ -273,7 +301,7 @@ img { display: block; }
     color: var(--primary) !important;
 }
 .col {
-    padding: 1em;
+    padding: var(--col--padding);
 }
 
 @media (max-width: 457px) {

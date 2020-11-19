@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Rule</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="bg__grey--dark">
+        <div class="content">
+            <div class="site--width">
+                <div class="row--nav">
+                    <div class="col xs--3 sm--3 md--3 lg--3">
+                        <a href="/">
+                            <p class="logo">M.</p>
+                        </a>
+                    </div>
+                    <div class="col xs--9 sm--9 md--9 lg--9">
+                        <nav class="flex flex--row justify--end align--center">
+                            <a href="/" id="btn--home">Home</a>
+                            <a href="/about.html" id="btn--about">About</a>
+                            <a href="/work">My Work</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="bg__grey--dark">
+                <div class="site--width">
+                    <div class="row">
+                        <div class="col xs--12 sm--12 md--12 lg--12">
+                            <h5 class="highlight">About Me</h5>
+                            <h3>More Text</h3>
+                        </div>
+                        <div class="col xs--12 sm--12 md--6 lg--6">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus temporibus ducimus id laborum dignissimos fugit tenetur magni sint, quas animi quisquam aliquid? Animi, dolorum accusantium.
+                        </div>
+                        <div class="col xs--12 sm--12 md--6 lg--6">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae iure id in excepturi voluptatem ut suscipit voluptate, hic ipsa enim magnam recusandae eum consequuntur placeat.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg__grey--darkest" id="contact">
+                <div class="site--width">
+                    <div class="row">
+                        <div class="col xs--12 sm--12 md--12 lg--12">
+                            <h5 class="highlight">Contact Me</h5>
+                            <h3>You can reach me either via my socials, or by leaving me a message!</h3>
+                        </div>
+                        <div class="col xs--12 sm--12 md--6 lg--6">
+                            {  Socials to go here  }
+                        </div>
+                        <div class="col xs--12 sm--12 md--6 lg--6">
+                            <form name="contact" method="POST" data-netlify="true">
+                                <p>
+                                  <label>Your Name: <input type="text" name="name" required/></label>   
+                                </p>
+                                <p>
+                                  <label>Your Email: <input type="email" name="email" required/></label>
+                                </p>
+                                <p>
+                                  <label>Message: <textarea name="message" required></textarea></label>
+                                </p>
+                                <p>
+                                  <button class="btn  btn--primary" type="submit">Send Message</button>
+                                </p>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

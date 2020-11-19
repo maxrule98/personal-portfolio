@@ -26,14 +26,14 @@
     background: rgba(255,200,200,.3);
 } */
 
-/* @font-face {
-    font-family: 'azonix';
-    src: url('../../fonts/azonix/Azonix.otf');
+@font-face {
+    font-family: 'CODE';
+    src: url('../../assets/fonts/ElliotSans-Bold.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'less-sans';
     src: url('../../fonts/Less-Sans/Less.otf');
     font-weight: normal;
@@ -60,7 +60,7 @@ img { display: block; }
 /* Headers */
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     text-rendering: optimizeLegibility; /* optional - helps kerning in some browsers */
-    font-family: 'azonix', sans-serif;
+    font-family: 'code', sans-serif;
     font-weight: normal;
     color: var(--white);
 }

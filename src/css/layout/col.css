@@ -1,5 +1,5 @@
 .col {
-    padding: 1em;
+    padding: var(--col--padding);
 }
 
 @media (max-width: 457px) {
