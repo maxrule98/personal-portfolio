@@ -4,7 +4,6 @@
     height: 40px;
     padding: 0 1em;
     cursor: pointer;
-    z-index: 10;
 }
 
 .btn--block {
@@ -21,11 +20,20 @@
 .btn--primary:active,
 .btn--primary:target
  {
-    transform: translate(0px, -3px);
+    transform: translate(0.25em, 0px);
 }
 .card {
     margin: 0;
-    padding: 0;
+    padding: 1em;
+}
+
+/* .card h5,
+.card p {
+    margin: 0 1em;
+} */
+
+.card .link:nth-of-type(2) {
+    margin-bottom: 1em;
 }
 
 .card img {
@@ -40,6 +48,10 @@
     font-weight: bold;
     background: var(--primary);
     max-width: max-content;
+}
+
+.logo a {
+    color: black;
 }
 header {
     position: fixed;
@@ -69,7 +81,8 @@ img {
 }
 :root {
     /* Colour Variables */
-    --primary: #c7d532;
+    /* --primary: #c7d532; */
+    --primary: skyblue;
     
     --white: #ffffff;
     --offwhite: #cdcdcd;
@@ -180,8 +193,6 @@ img { display: block; }
     margin-bottom: 20px;
 }
 
-
-
 /* Paragraph Elements */
 .content a:link {
     /* color: #375493; */
@@ -255,13 +266,13 @@ img { display: block; }
 .content input, .content textarea, .content select {
     display: block;
     margin: 4px 0 24px 0;
+    border: none;
 }
 .content input[type=text], .content input[type=email], .content input[type=url], .content textarea {
     color: black;
     width: 100%;
     height: 40px;
-    border: 2px solid;
-    border-color: var(--offwhite);
+    border: none;
     background: var(--offwhite);
     font-size: 16px;
     line-height: 30px;
@@ -301,7 +312,7 @@ img { display: block; }
     color: var(--primary) !important;
 }
 .col {
-    padding: var(--col--padding);
+    padding: 0;
 }
 
 @media (max-width: 457px) {
@@ -552,7 +563,7 @@ img { display: block; }
 .row {
     padding: var(--row--padding) 0;
     display: grid;
-    gap: 0.5em;
+    gap: 1em;
     grid-template-columns: repeat(12, minmax(5px, 1fr));
 }
 
@@ -566,15 +577,7 @@ img { display: block; }
     max-width: 1250px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 2em;
-}
-
-
-/* Create vadiable for screen sizes */
-@media (max-width: 767px) {
-    .site--width {
-        padding: 0;
-    }
+    padding: 1em;
 }
 /* Component Imports */
 

@@ -1,6 +1,15 @@
 .card {
     margin: 0;
-    padding: 0;
+    padding: 1em;
+}
+
+/* .card h5,
+.card p {
+    margin: 0 1em;
+} */
+
+.card .link:nth-of-type(2) {
+    margin-bottom: 1em;
 }
 
 .card img {

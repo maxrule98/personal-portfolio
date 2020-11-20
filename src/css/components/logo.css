@@ -6,3 +6,7 @@
     background: var(--primary);
     max-width: max-content;
 }
+
+.logo a {
+    color: black;
+}

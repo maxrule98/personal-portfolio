@@ -95,8 +95,6 @@ img { display: block; }
     margin-bottom: 20px;
 }
 
-
-
 /* Paragraph Elements */
 .content a:link {
     /* color: #375493; */
@@ -170,13 +168,13 @@ img { display: block; }
 .content input, .content textarea, .content select {
     display: block;
     margin: 4px 0 24px 0;
+    border: none;
 }
 .content input[type=text], .content input[type=email], .content input[type=url], .content textarea {
     color: black;
     width: 100%;
     height: 40px;
-    border: 2px solid;
-    border-color: var(--offwhite);
+    border: none;
     background: var(--offwhite);
     font-size: 16px;
     line-height: 30px;

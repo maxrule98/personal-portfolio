@@ -4,13 +4,5 @@
     max-width: 1250px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 2em;
-}
-
-
-/* Create vadiable for screen sizes */
-@media (max-width: 767px) {
-    .site--width {
-        padding: 0;
-    }
+    padding: 1em;
 }
