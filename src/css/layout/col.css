@@ -2,6 +2,11 @@
     padding: 0;
 }
 
+.col--title {
+    grid-column: span 12;
+    margin-bottom: -1em;
+}
+
 @media (max-width: 457px) {
     .xs--1 {
         grid-column: span 1;

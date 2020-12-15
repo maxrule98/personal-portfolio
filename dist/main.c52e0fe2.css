@@ -56,28 +56,75 @@
 header {
     position: fixed;
     width: 100%;
-    height: 68px;
+    height: var(--header-height);
     z-index: 1;
+    transition: all 275ms ease;
 }
 
 /* Fix nav overlaying main */
 main {
-    padding-top: 68px;
+    padding-top: var(--header-height);
 }
 
 nav a {
     color: var(--offwhite);
 }
+.social--svg {
+    width: 30px;
+    height: 100%;
+    fill: var(--offwhite);
+    transition: fill 275ms ease-in;
+}
+.social--svg:hover {
+    fill: var(--primary);
+}
+.fade-in {
+    opacity: 0;
+    transition: all 375ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transition: all 375ms ease-in;
+}
+
+.from--left {
+    transform: translateX(-15%);
+}
+
+.from--right {
+    transform: translateX(15%);
+}
+
+.from--bottom {
+    transform: translateY(15%);
+}
+
+.from--left,
+.from--right,
+.from--bottom {
+    opacity: 0;
+    transition: transform 375ms ease-in;
+}
+
+.from--left.appear,
+.from--right.appear,
+.from--bottom.appear {
+    opacity: 1;
+    transition-property: opacity transform;
+    transition: 375ms ease-in;
+    transform: translateX(0);
+}
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-img {
-    width: 100%;
+html {
+    overflow-y: scroll;
 }
 :root {
     /* Colour Variables */
@@ -95,142 +142,111 @@ img {
     /* Layout Variables */
     --row--padding: 3em;
     --col--padding: 1em;
+
+
+
+    /* Nav */
+    --header-height: 68px;
 }
-/*
-    gethifi.com - CSS Type Boilerplate
-    2010-11-12
-    v. 0.9
-    Author:Joel Sutherland (@JoelSutherland)
-    Liscenced under the MIT license
-    Type and Type Baseline
-    This stylesheet is designed to set up all text elements on a type baseline.
-    Using it ensures element coverage and ideally, clean type.
-   
-     Setup Instructions
-      *  ".content" is in front of all declarations.  This is so that it can
-         target only elements in a .content container.  Search/Replace to
-         change or eliminate.  It's probably best to eliminate so that you can
-         ensure this is used globally.
-      *  The default baseline is 20px.  Search/Replace 20px to adjust.
-      *  Once this is adjusted, it's also important to check the headers
-*/
-
-/* Baseline Debugging Backgrounds */
-/* .showBaseline {
-    background: url(../images/baseline-20.png);
-}
-.showBaseline h1, .showBaseline h2, .showBaseline h3, .showBaseline h4, .showBaseline h5, .showBaseline h6,
-.showBaseline p, .showBaseline ul, .showBaseline ol, .showBaseline pre, .showBaseline blockquote {
-    background: rgba(255,200,200,.3);
-} */
-
-@font-face {
-    font-family: 'CODE';
-    src: url('/ElliotSans-Bold.a9eab015.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* @font-face {
-    font-family: 'less-sans';
-    src: url('../../fonts/Less-Sans/Less.otf');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-/* Standard Text */
-.content, .content input {
+html, input {
     font: normal 16px/20px arial;
     color: var(--offwhite);
 }
 
-
-/* Block Baselines */
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
-.content p, .content ul, .content ol, .content pre, .content blockquote,
-.content textarea, .content button {
+h1, h2, h3, h4, h5, h6, p, ul, ol, pre, blockquote, textarea, button {
     margin-bottom: 20px;
 }
-img { display: block; }
 
+img {
+    display: block;
+    width: 100%;
+}
 
-
-/* Headers */
-.content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility; /* optional - helps kerning in some browsers */
     font-family: 'code', sans-serif;
     font-weight: normal;
     color: var(--white);
 }
-.content h1, .content h1 a {
+
+h1 {
     font-size: 2rem;
     line-height: 2em;
 }
-.content h2 {
+
+h2 {
     font-size: 1.875rem;
     line-height: 1.875em;
 }
-.content h3 {
+
+h3 {
     font-size: 1.5rem;
     line-height: 1.5em;
-    margin-bottom: 20px;
 }
-.content h4 { 
+
+h4 { 
     font-size: 1.25rem;
     line-height: 1.25em;
     font-weight: bold;
 }
-.content h5 {
+
+h5 {
     font-size: 1rem;
     line-height: 1.25em;
     font-weight: bold;
-    margin-bottom: 20px;
 }
-.content h6 {
+
+h6 {
     font-size: 0.875rem;
     line-height: 1.25em;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
 /* Paragraph Elements */
-.content a:link {
+a:link {
     /* color: #375493; */
     text-decoration: none;
 }
-.content a:active {
+
+a:active {
     /* background: #ccd5e2; */
     text-decoration: underline;
 }
-.content a:hover {
+
+a:hover {
     /* background: #ccd5e2; */
     text-decoration: underline;
 }
-.content a:visited {
+
+a:visited {
     /* color: black; */
     text-decoration: underline;
 }
-.content sup, .content sub {
+
+sup, sub {
     font-size: 80%;
     line-height: 0;
 }
-.content sup {
+
+sup {
     vertical-align: super;
 }
-.content sub {
+
+sub {
     vertical-align: sub;
 }
-.content code {
+
+code {
     font-family: Consolas, "Courier New", Courier, mono;
 }
 
-
-
 /* Block Elements */
-.content ul , .content ol{
+ul , ol{
     margin-left: 20px;
 }
-.content blockquote {
+
+blockquote {
     display: block;
     background: #eee;
     background: rgba(0,0,0,.05);
@@ -240,10 +256,12 @@ img { display: block; }
     padding: 10px;
     font-style: italic;
 }
-    .content blockquote p:last-child {
-        margin-bottom: 0;
-    }
-.content pre {
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+pre {
     font-family: Consolas, "Courier New", Courier, mono;
     background: black;
     background: rgba(0,0,0,.8);
@@ -251,24 +269,26 @@ img { display: block; }
     padding: 10px 20px;
 }
 
-
-
 /* Forms */
-.content form { 
+form { 
 }
-.content form p {
+
+form p {
     margin: 0;
 }
-.content label {
+
+label {
     display: block;
     margin-bottom: 0;
 }
-.content input, .content textarea, .content select {
+
+input, textarea, select {
     display: block;
     margin: 4px 0 24px 0;
     border: none;
 }
-.content input[type=text], .content input[type=email], .content input[type=url], .content textarea {
+
+input[type=text], input[type=email], input[type=url], textarea {
     color: black;
     width: 100%;
     height: 40px;
@@ -281,12 +301,14 @@ img { display: block; }
     -moz-border-radius: var(--border-radius);
     -webkit-border-radius: var(--border-radius);
 }
-.content input[type=text]:focus, .content input[type=email]:focus, .content input[type=url]:focus, .content textarea:focus {
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, textarea:focus {
     outline: none;
     border: 2px solid;
     border-color: var(--primary);
 }
-.content textarea {
+
+textarea {
     height: 150px;
     min-height: 40px;
     width: 100%;
@@ -295,24 +317,35 @@ img { display: block; }
     resize: vertical;
 }
 
-.content label.error {
+label.error {
     width: 100%;
     text-align: right;
     color: #aa0000;
 }
-.content label.error:before {
+
+label.error:before {
     content: "▲ ";
 }
-.content input.error, .content textarea.error {
+
+input.error, textarea.error {
     border-color: #aa0000;
 }
 
-/* Transforms */
+
+
+
+
+
 .highlight {
     color: var(--primary) !important;
 }
 .col {
     padding: 0;
+}
+
+.col--title {
+    grid-column: span 12;
+    margin-bottom: -1em;
 }
 
 @media (max-width: 457px) {

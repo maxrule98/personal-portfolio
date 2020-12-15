@@ -3,9 +3,11 @@
 @import url('./components/card.css');
 @import url('./components/logo.css');
 @import url('./components/nav.css');
+@import url('./components/social.css');
 
 
 /* Global Imports */
+@import url('./global/animate.css');
 @import url('./global/reset.css');
 @import url('./global/variables.css');
 @import url('./global/typography.css');

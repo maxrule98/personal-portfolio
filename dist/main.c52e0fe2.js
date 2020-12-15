@@ -204,6 +204,16 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/components/social.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/global/animate.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/global/reset.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -219,7 +229,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/fonts/ElliotSans-Bold.ttf":[["ElliotSans-Bold.a9eab015.ttf","assets/fonts/ElliotSans-Bold.ttf"],"assets/fonts/ElliotSans-Bold.ttf"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/layout/col.css":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/layout/col.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -249,7 +259,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./components/btn.css":"css/components/btn.css","./components/card.css":"css/components/card.css","./components/logo.css":"css/components/logo.css","./components/nav.css":"css/components/nav.css","./global/reset.css":"css/global/reset.css","./global/variables.css":"css/global/variables.css","./global/typography.css":"css/global/typography.css","./layout/col.css":"css/layout/col.css","./layout/colours.css":"css/layout/colours.css","./layout/flex.css":"css/layout/flex.css","./layout/row.css":"css/layout/row.css","./layout/site.css":"css/layout/site.css","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/btn.css":"css/components/btn.css","./components/card.css":"css/components/card.css","./components/logo.css":"css/components/logo.css","./components/nav.css":"css/components/nav.css","./components/social.css":"css/components/social.css","./global/animate.css":"css/global/animate.css","./global/reset.css":"css/global/reset.css","./global/variables.css":"css/global/variables.css","./global/typography.css":"css/global/typography.css","./layout/col.css":"css/layout/col.css","./layout/colours.css":"css/layout/colours.css","./layout/flex.css":"css/layout/flex.css","./layout/row.css":"css/layout/row.css","./layout/site.css":"css/layout/site.css","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -277,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50028" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52943" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

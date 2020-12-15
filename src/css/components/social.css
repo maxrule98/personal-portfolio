@@ -1,0 +1,9 @@
+.social--svg {
+    width: 30px;
+    height: 100%;
+    fill: var(--offwhite);
+    transition: fill 275ms ease-in;
+}
+.social--svg:hover {
+    fill: var(--primary);
+}
