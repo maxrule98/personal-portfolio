@@ -4,6 +4,7 @@
     height: 40px;
     padding: 0 1em;
     cursor: pointer;
+    background: none;
 }
 
 .btn--block {
@@ -21,4 +22,13 @@
 .btn--primary:target
  {
     transform: translate(0.25em, 0px);
+}
+
+.btn--menu {
+    outline: none;
+    fill: var(--primary);
+}
+
+.btn--menu i {
+    color: var(--primary);
 }

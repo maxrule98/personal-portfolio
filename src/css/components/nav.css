@@ -1,16 +1,72 @@
-header {
+.header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: var(--header-height);
-    z-index: 1;
-    transition: all 275ms ease;
+    color: var(--primary);
+    background: var(--grey--darkest);
+    z-index: 10;
+    transition: top 275ms ease;
 }
 
-/* Fix nav overlaying main */
 main {
-    padding-top: var(--header-height);
+    margin-top: var(--header-height);
 }
 
-nav a {
-    color: var(--offwhite);
+.nav__links {
+    /* transform: translateX(calc(var(--menu-width) * -1)); */
+
+    position: fixed;
+    top: 0;
+    left: -275px;
+    height: 100vh;
+    width: var(--menu-width);
+    padding-top: var(--header-height);
+    z-index: 2;
+    background: var(--grey--lightest);
+    transition: left 275ms linear;
+}
+
+.change.nav__links {
+    /* transform: translateX(0); */
+    left: 0px;
+    transition: left 275ms linear;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 12px 15px;
+    text-decoration: none;
+}
+
+.nav__link > i {
+    margin-right: 15px;
+}
+
+.nav__link--active {
+    color: var(--primary);
+}
+
+.close__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 275ms linear;
+}
+
+.change.close__overlay {
+    visibility: visible;
+    opacity: 100%;
+    transition: all 275ms linear;
 }

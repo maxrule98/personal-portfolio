@@ -5,28 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
     <title>Max Rule</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header class="bg__grey--dark">
-        <div class="content">
-            <div class="site--width">
-                <div class="row--nav">
-                    <div class="col xs--3 sm--3 md--3 lg--3">
-                        <a href="/">
-                            <p class="logo">M.</p>
-                        </a>
-                    </div>
-                    <div class="col xs--9 sm--9 md--9 lg--9">
-                        <nav class="flex flex--row justify--end align--center">
-                            <a href="/" id="btn--home">Home</a>
-                            <a href="/about" id="btn--about">About</a>
-                            <a href="/projects">Projects</a>
-                        </nav>
-                    </div>
+    <header class="header">
+        <div class="site--width">
+            <div class="row--nav">
+                <div class="col xs--6 sm--6 md--6 lg--6 flex justify--start align--center">
+                    <a href="/">
+                        <p class="logo">M.</p>
+                    </a>
+                </div>
+                <div class="col xs--6 sm--6 md--6 lg--6 flex justify--end align--center">
+                    <button class="btn btn--menu" id="btnNav">
+                        <i class="material-icons">menu</i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
+    <nav class="nav">
+        <div class="nav__links">
+            <a href="/" class="nav__link">
+                <i class="material-icons">home</i>
+                Home
+            </a>
+            <a href="/about" class="nav__link">
+                <i class="material-icons">local_offer</i>
+                About
+            </a>
+            <a href="/about#contact" class="nav__link">
+                <i class="material-icons">category</i>
+                Contact
+            </a>
+            <a href="projects" class="nav__link">
+                <i class="material-icons">category</i>
+                Projects
+            </a>
+            <a href="projects" class="nav__link">
+                <i class="material-icons">person</i>
+                Blog
+            </a>
+        </div>
+    </nav>
+    <div class="close__overlay"></div>  
 
     <main>
         <div class="content">
@@ -53,24 +75,35 @@
                             <h5 class="highlight">Contact Me</h5>
                             <h3>You can reach me either via my socials, or by leaving me a message!</h3>
                         </div>
-                        <div class="col xs--12 sm--12 md--6 lg--6 fade-in from--left">
-                            {  Socials to go here  }
+                        <div class="col xs--12 sm--12 md--6 lg--6 fade-in from--bottom">
+                            <div class="flex flex--row justify--center">
+                                <a href="">
+                                    <svg class="social--svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="0.88em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3.6 10.4.8 15.8.8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34z"/></svg>
+                                </a>
+                                <a href="">
+                                    <svg class="social--svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="0.88em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48c27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+                                </a>
+                                <a href="">
+                                    <svg class="social--svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="0.88em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path d="M224 202.66A53.34 53.34 0 1 0 277.36 256A53.38 53.38 0 0 0 224 202.66zm124.71-41a54 54 0 0 0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31 6.43a54 54 0 0 0-30.41 30.41c-8.28 21-6.43 71.05-6.43 94.33s-1.85 73.27 6.47 94.34a54 54 0 0 0 30.41 30.41c21 8.29 71 6.43 94.31 6.43s73.24 1.93 94.3-6.43a54 54 0 0 0 30.41-30.41c8.35-21 6.43-71.05 6.43-94.33s1.92-73.26-6.43-94.33zM224 338a82 82 0 1 1 82-82a81.9 81.9 0 0 1-82 82zm85.38-148.3a19.14 19.14 0 1 1 19.13-19.14a19.1 19.1 0 0 1-19.09 19.18zM400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-17.12 290c-1.29 25.63-7.14 48.34-25.85 67s-41.4 24.63-67 25.85c-26.41 1.49-105.59 1.49-132 0c-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61 0-132c1.29-25.63 7.07-48.34 25.85-67s41.47-24.56 67-25.78c26.41-1.49 105.59-1.49 132 0c25.63 1.29 48.33 7.15 67 25.85s24.63 41.42 25.85 67.05c1.49 26.32 1.49 105.44 0 131.88z"/></svg>
+                                </a>
+                            </div>
                         </div>
                         <div class="col xs--12 sm--12 md--6 lg--6 fade-in from--right">
-                            <form name="contact" method="POST" data-netlify="true">
-                                <p>
-                                  <label>Your Name: <input type="text" name="name" required/></label>   
-                                </p>
-                                <p>
-                                  <label>Your Email: <input type="email" name="email" required/></label>
-                                </p>
-                                <p>
-                                  <label>Message: <textarea name="message" required></textarea></label>
-                                </p>
-                                <p>
-                                  <button class="btn  btn--primary" type="submit">Send Message</button>
-                                </p>
-                              </form>
+                            <form>
+                                <fieldset>
+                                    <legend><h5 class="highlight">Your Name</h5></legend>
+                                    <input type="text" name="" id="">
+                                </fieldset>
+                                <fieldset>
+                                    <legend><h5 class="highlight">Your Email</h5></legend>
+                                    <input type="text" name="" id="">
+                                </fieldset>
+                                <fieldset>
+                                    <legend><h5 class="highlight">Your Message</h5></legend>
+                                    <textarea></textarea>
+                                </fieldset>
+                                <button class="btn btn--primary">Send Message ▸</button>
+                            </form>
                         </div>
                     </div>
                 </div>

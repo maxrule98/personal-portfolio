@@ -1,14 +1,18 @@
-import { opine, json, urlencoded } from "https://deno.land/x/opine@0.27.0/mod.ts";
-const app = opine();
+const express = require('express')
+const app = express();
+const bodyParser = require('body-parser');
 const port = 3000;
 
-
 // Routes
-import apiRoutes from './routes/apiRoutes.js'
-import uiRoutes from './routes/uiRoutes.js'
+const apiRoutes = require('./routes/apiRoutes.js')
+const uiRoutes = require('./routes/uiRoutes.js')
 
-app.use(json()) // for parsing application/json
-app.use(urlencoded()) // for parsing application/x-www-form-urlencoded
+if (process.env.NODE_ENV !== 'production') {
+    require('./build');
+}
+
+app.use(bodyParser.json({ limit: '1mb' }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 apiRoutes(app)
 uiRoutes(app)

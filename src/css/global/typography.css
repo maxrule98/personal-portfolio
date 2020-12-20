@@ -1,191 +1,24 @@
-html, input {
-    font: normal 16px/20px arial;
-    color: var(--offwhite);
+p,
+fieldset {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    margin-bottom: 1em;
 }
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, pre, blockquote, textarea, button {
-    margin-bottom: 20px;
+p {
+    color: rgb(213, 213, 213);
 }
-
-img {
-    display: block;
-    width: 100%;
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-    text-rendering: optimizeLegibility; /* optional - helps kerning in some browsers */
-    font-family: 'code', sans-serif;
-    font-weight: normal;
-    color: var(--white);
-}
-
-h1 {
-    font-size: 2rem;
-    line-height: 2em;
-}
-
-h2 {
-    font-size: 1.875rem;
-    line-height: 1.875em;
-}
-
-h3 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
-}
-
-h4 { 
-    font-size: 1.25rem;
-    line-height: 1.25em;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
+    margin: 0;
+    margin-bottom: 1em;
 }
 
-h5 {
-    font-size: 1rem;
-    line-height: 1.25em;
-    font-weight: bold;
-}
-
-h6 {
-    font-size: 0.875rem;
-    line-height: 1.25em;
-    font-weight: bold;
-}
-
-/* Paragraph Elements */
-a:link {
-    /* color: #375493; */
+a {
     text-decoration: none;
 }
 
-a:active {
-    /* background: #ccd5e2; */
-    text-decoration: underline;
-}
-
-a:hover {
-    /* background: #ccd5e2; */
-    text-decoration: underline;
-}
-
-a:visited {
-    /* color: black; */
-    text-decoration: underline;
-}
-
-sup, sub {
-    font-size: 80%;
-    line-height: 0;
-}
-
-sup {
-    vertical-align: super;
-}
-
-sub {
-    vertical-align: sub;
-}
-
-code {
-    font-family: Consolas, "Courier New", Courier, mono;
-}
-
-/* Block Elements */
-ul , ol{
-    margin-left: 20px;
-}
-
-blockquote {
-    display: block;
-    background: #eee;
-    background: rgba(0,0,0,.05);
-    border-left: 4px solid;
-    border-left-color: #ccc;
-    border-left-color:  rgba(0,0,0,.1);
-    padding: 10px;
-    font-style: italic;
-}
-
-blockquote p:last-child {
-    margin-bottom: 0;
-}
-
-pre {
-    font-family: Consolas, "Courier New", Courier, mono;
-    background: black;
-    background: rgba(0,0,0,.8);
-    color: #eee;
-    padding: 10px 20px;
-}
-
-/* Forms */
-form { 
-}
-
-form p {
-    margin: 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 0;
-}
-
-input, textarea, select {
-    display: block;
-    margin: 4px 0 24px 0;
-    border: none;
-}
-
-input[type=text], input[type=email], input[type=url], textarea {
-    color: black;
-    width: 100%;
-    height: 40px;
-    border: none;
-    background: var(--offwhite);
-    font-size: 16px;
-    line-height: 30px;
-    padding: 0 0.5em;
-    border-radius: var(--border-radius);
-    -moz-border-radius: var(--border-radius);
-    -webkit-border-radius: var(--border-radius);
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, textarea:focus {
-    outline: none;
-    border: 2px solid;
-    border-color: var(--primary);
-}
-
-textarea {
-    height: 150px;
-    min-height: 40px;
-    width: 100%;
-    font-size: 14px;
-    line-height: 16px;
-    resize: vertical;
-}
-
-label.error {
-    width: 100%;
-    text-align: right;
-    color: #aa0000;
-}
-
-label.error:before {
-    content: "▲ ";
-}
-
-input.error, textarea.error {
-    border-color: #aa0000;
-}
-
-
-
-
-
-
 .highlight {
-    color: var(--primary) !important;
+    color: var(--primary);
 }

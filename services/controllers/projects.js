@@ -1,19 +1,19 @@
-import { Client } from "https://deno.land/x/postgres/mod.ts";
+const { pool } = require('pg');
 
-const client = new Client({
+const pool = new Pool({
     user: "maxrule",
     database: "projects",
     hostname: "localhost",
     port: 5432
 });
-await client.connect();
+await pool.connect();
 
   
 
 // @desc    Get all Products
 // @route   GET /api/v1/products
 const getProjects = async ( req, res ) => {
-    const result = await client.query(`
+    const result = await pool.query(`
     SELECT json_build_object('id', id, 'name', name, 'desc', description, 'slug', slug)
     FROM   projects 
     `);

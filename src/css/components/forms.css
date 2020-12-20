@@ -1,0 +1,31 @@
+fieldset {
+    margin: 0;
+    padding: 0;
+    /* background: white; */
+    color: var(--primary);
+}
+
+fieldset input,
+fieldset textarea {
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0 1em;
+    /* background: white; */
+    background: none;
+    border: none;
+    outline: none;
+}
+
+fieldset:focus-within {
+    border: 2px solid var(--primary);
+}
+
+fieldset textarea {
+    resize: vertical;
+    max-height: 150px;
+}
+
+legend h5 {
+    margin: 0;
+}

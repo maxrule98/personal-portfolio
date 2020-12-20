@@ -6,6 +6,7 @@
 }
 
 .row--nav {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(12, minmax(5px, 1fr));
 }
