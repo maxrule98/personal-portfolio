@@ -24,7 +24,7 @@ main {
     width: var(--menu-width);
     padding-top: var(--header-height);
     z-index: 2;
-    background: var(--grey--lightest);
+    background: var(--grey--light);
     transition: left 275ms linear;
 }
 
@@ -40,6 +40,7 @@ main {
     color: var(--primary);
     font-weight: bold;
     padding: 12px 15px;
+    margin: 0;
     text-decoration: none;
 }
 
@@ -47,8 +48,9 @@ main {
     margin-right: 15px;
 }
 
-.nav__link--active {
-    color: var(--primary);
+.nav__link:hover {
+    color: black;
+    background: var(--primary);
 }
 
 .close__overlay {

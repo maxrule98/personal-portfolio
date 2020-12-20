@@ -10,7 +10,7 @@ fieldset textarea {
     color: white;
     width: 100%;
     margin: 0;
-    padding: 0 1em;
+    padding: 0 1em 0.5em 1em;
     /* background: white; */
     background: none;
     border: none;

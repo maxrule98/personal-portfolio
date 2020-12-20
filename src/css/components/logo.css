@@ -1,12 +1,31 @@
-.logo {
-    margin: 0 !important;
+/* .logo {
+    width: 40px;
+    margin: 0 auto;
+    margin-left: 5px;
     padding: 0.5em;
     color: black;
     font-weight: bold;
     background: var(--primary);
-    max-width: max-content;
+    border-radius: var(--border-radius);
+} */
+
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+}
+
+.logo--text {
+    color: black;
+    margin: 0;
 }
 
 .logo a {
-    color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

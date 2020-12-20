@@ -2,9 +2,12 @@
     position: relative;
     border: none;
     height: 40px;
+    margin: 0;
     padding: 0 1em;
     cursor: pointer;
+    color: black;
     background: none;
+    border-radius: var(--border-radius);
 }
 
 .btn--block {
@@ -25,6 +28,9 @@
 }
 
 .btn--menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
     fill: var(--primary);
 }
