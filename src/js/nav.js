@@ -17,11 +17,11 @@ btnNav.addEventListener('click', () => {
     if (!nav.classList.contains('change')) {
         nav.classList.add('change');
         close__overlay.classList.add('change');
-        lockScroll.style.overflow = 'hidden';
+        lockScroll.style.overflowY = 'hidden';
     } else {
         nav.classList.remove('change');
         close__overlay.classList.remove('change');
-        lockScroll.style.overflow = 'scroll';
+        lockScroll.style.overflowY = 'scroll';
     }
     
 })
@@ -29,5 +29,5 @@ btnNav.addEventListener('click', () => {
 close__overlay.addEventListener('click', () => {
     nav.classList.remove('change');
     close__overlay.classList.remove('change');
-    body.style.overflow = 'scroll';
+    lockScroll.style.overflowY = 'scroll';
 })
