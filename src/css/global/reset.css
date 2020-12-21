@@ -33,6 +33,7 @@ html {
   scroll-behavior: smooth;
   overflow-y: scroll;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
 /* Set core body defaults */
