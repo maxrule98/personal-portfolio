@@ -17,7 +17,7 @@ input {
     margin-bottom: 1em;
 }
 p {
-    color: rgb(213, 213, 213);
+    color: var(--offwhite);
 }
 h1, h2, h3, h4, h5, h6, button {
     color: white;
@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6, button {
     font-weight: bold;
     margin: 0;
     margin-bottom: 1em;
+}
+
+ul {
+    padding-left: 1em;
 }
 
 .highlight {

@@ -1,4 +1,4 @@
-const { pool } = require('pg');
+const { Pool } = require('pg');
 
 const pool = new Pool({
     user: "maxrule",
@@ -6,7 +6,6 @@ const pool = new Pool({
     hostname: "localhost",
     port: 5432
 });
-await pool.connect();
 
   
 
@@ -14,11 +13,15 @@ await pool.connect();
 // @route   GET /api/v1/products
 const getProjects = async ( req, res ) => {
     const result = await pool.query(`
-    SELECT json_build_object('id', id, 'name', name, 'desc', description, 'slug', slug)
-    FROM   projects 
+    SELECT 
+        id,
+        name,
+        description,
+        slug,
+        img_url
+    FROM
+        projects 
     `);
-
-    console.log(result.rows);
             
     res.json({
         success: true,
@@ -28,8 +31,21 @@ const getProjects = async ( req, res ) => {
 
 // @desc    Get one Products
 // @route   GET /api/v1/products/:id
-const getProduct = async ( req, res ) => {
-    const result = await client.query("SELECT * FROM products WHERE product_id = $1", req.params.id);
+const getProduct = async (req, res) => {
+    const { slug } = req.params;
+    const result = await pool.query(`
+    SELECT 
+        id,
+        name,
+        description,
+        slug,
+        img_url
+    FROM
+        projects 
+    WHERE
+        slug = $1
+    `, [`${slug}`]);
+
     if (result.rows.length === 0) {
         res.status = 404
         res.json({
@@ -40,10 +56,27 @@ const getProduct = async ( req, res ) => {
         res.status = 200
         res.json({
             success: true,
-            data: await result.rows[0]
+            rows: await result.rows[0]
         })
     }
 }
 
+// const getProduct = async ( req, res ) => {
+//     const result = await client.query("SELECT * FROM products WHERE product_id = $1", req.params.id);
+//     if (result.rows.length === 0) {
+//         res.status = 404
+//         res.json({
+//             success: false,
+//             msg: 'Error! No such product exists'
+//         })
+//     } else {
+//         res.status = 200
+//         res.json({
+//             success: true,
+//             data: await result.rows[0]
+//         })
+//     }
+// }
 
-export { getProjects, getProduct }
+
+module.exports = { getProjects, getProduct };
